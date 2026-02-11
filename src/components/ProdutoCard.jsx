@@ -1,15 +1,17 @@
 import React from 'react';
 
-// Componentes e Props 
 const ProdutoCard = ({ nome, preco, descricao, imagem }) => {
     return (
-        <div className="card">
-            <img src={imagem || 'https://via.placeholder.com/150'} alt={nome} />
-            <h3>{nome}</h3>
-            {/* Formatação simples de preço */}
-            <p className="preco">R$ {parseFloat(preco).toFixed(2)}</p>
-            <p>{descricao}</p>
-        </div>
+        <article className="card">
+            <div className="card-image-container">
+                <img src={imagem || 'https://via.placeholder.com/300x200'} alt={nome} />
+            </div>
+            <div className="card-content">
+                <h3>{nome}</h3>
+                <p className="preco">R$ {parseFloat(preco).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</p>
+                <p className="descricao">{descricao}</p>
+            </div>
+        </article>
     );
 };
 
