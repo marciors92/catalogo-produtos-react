@@ -18,10 +18,10 @@ const FormularioProduto = ({ aoAdicionar }) => {
 
     return (
         <form onSubmit={handleSubmit} className="form-cadastro">
-            <h2>Cadastrar Novo Produto</h2>
+            <h2>Cadastrar novo produto</h2>
             <input
                 type="text"
-                placeholder="Nome do Produto"
+                placeholder="Nome do produto"
                 value={formData.nome}
                 onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
             />
@@ -36,7 +36,7 @@ const FormularioProduto = ({ aoAdicionar }) => {
                 value={formData.descricao}
                 onChange={(e) => setFormData({ ...formData, descricao: e.target.value })}
             />
-            <button type="submit">Adicionar ao Catálogo</button>
+            <button type="submit">Adicionar ao catálogo</button>
         </form>
     );
 };
